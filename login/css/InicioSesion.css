@@ -1,0 +1,368 @@
+/*CSS de IngresarLogin.html*/
+.body_JC {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+    background-image: url(../../app/img/yugioh.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+   
+}
+
+/*CSS para el formulario*/
+.container_JC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.login-form_JC {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: grid;
+    grid-gap: 15px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 4px solid #d87c0b;
+    background: rgba(211, 194, 16, 0.2);
+}
+
+.title_JC {
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    color: #fbff00;
+}
+
+/*CSS para los input*/
+
+.input-group_JC {
+    display: grid;
+    grid-gap: 5px;
+}
+
+.label_JC {
+    color: #fff;
+    font-size: 14px;
+}
+
+.input_JC {
+    padding: 18px;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fbff00;
+    font-size: medium;
+    color: #fff;
+}
+
+.input_JC:focus {
+    border-bottom-color: #e68003; 
+    outline: none; 
+}
+
+.input_JC::placeholder{
+    color: #fff;
+}
+
+.checkbox-group_JC {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox_JC {
+    margin-right: 5px;
+}
+
+.checkbox-label_JC {
+    color: #fff;
+}
+
+/*CSS para los botones*/
+
+.btn_JC {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F56E06;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-left: 0%;
+    width: 295px;
+    margin-top: 6px;
+}
+
+.btn_JC:hover {
+    background-color: #ff1b0b;
+}
+
+
+.signup_JC {
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+.signup-link_JC {
+    color: #fffb23;
+    text-decoration: none;
+}
+
+
+/*Responsive*/
+@media (max-width: 768px) {
+    .login-form_JC {
+        width: 80%;
+    }
+
+    .btn_JC{
+        width: 100%;
+    }
+}
+
+
+/* Estilo general para todos los modales */
+dialog {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Krub', sans-serif;
+}
+
+dialog h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el modal de registro exitoso */
+#editConfirmado_JC {
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+}
+
+#editConfirmado_JC img {
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Estilo para el modal de error de campos */
+#errorCampos_JC {
+    background: linear-gradient(45deg, #dc3545, #da293b);
+    color: white;
+}
+
+#errorCampos_JC img {
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+#errorDatos_JC{
+  background: linear-gradient(45deg, #dc3545, #da293b);
+  color: white;
+}
+
+/* Estilo para el modal de usuario ya registrado */
+#registerror_JC {
+    background: linear-gradient(45deg, #0858a2, #074bdf);
+    color: white;
+}
+
+#registerror_JC img {
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/*CSS para la animacion de carga */
+
+.sk-folding-cube {
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+  }
+  
+  .sk-folding-cube .sk-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1); 
+  }
+  .sk-folding-cube .sk-cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F56E06;
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+            animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+  .sk-folding-cube .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+            transform: scale(1.1) rotateZ(90deg);
+  }
+  .sk-folding-cube .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+            transform: scale(1.1) rotateZ(180deg);
+  }
+  .sk-folding-cube .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+            transform: scale(1.1) rotateZ(270deg);
+  }
+  .sk-folding-cube .sk-cube2:before {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  .sk-folding-cube .sk-cube3:before {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s; 
+  }
+  .sk-folding-cube .sk-cube4:before {
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+  }
+  @-webkit-keyframes sk-foldCubeAngle {
+    0%, 10% {
+      -webkit-transform: perspective(140px) rotateX(-180deg);
+              transform: perspective(140px) rotateX(-180deg);
+      opacity: 0; 
+    } 25%, 75% {
+      -webkit-transform: perspective(140px) rotateX(0deg);
+              transform: perspective(140px) rotateX(0deg);
+      opacity: 1; 
+    } 90%, 100% {
+      -webkit-transform: perspective(140px) rotateY(180deg);
+              transform: perspective(140px) rotateY(180deg);
+      opacity: 0; 
+    } 
+  }
+  
+  @keyframes sk-foldCubeAngle {
+    0%, 10% {
+      -webkit-transform: perspective(140px) rotateX(-180deg);
+              transform: perspective(140px) rotateX(-180deg);
+      opacity: 0; 
+    } 25%, 75% {
+      -webkit-transform: perspective(140px) rotateX(0deg);
+              transform: perspective(140px) rotateX(0deg);
+      opacity: 1; 
+    } 90%, 100% {
+      -webkit-transform: perspective(140px) rotateY(180deg);
+              transform: perspective(140px) rotateY(180deg);
+      opacity: 0; 
+    }
+  }
+
+  /* Estilo general para el loader y el fondo borroso */
+.loader-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none; 
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+
+
+/*CSS para el spinner*/
+.spinner {
+    margin: 100px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  .spinner > div {
+    background-color: #F56E06;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  }
+  
+  .spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+  
+  .spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  .spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  
+  .spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+  }
+  
+  @-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    20% { -webkit-transform: scaleY(1.0) }
+  }
+  
+  @keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }  20% { 
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }
+
+
+

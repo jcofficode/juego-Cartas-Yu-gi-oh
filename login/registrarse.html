@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../app/img/ygo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://kit.fontawesome.com/fe0dc59af9.js" crossorigin="anonymous"></script>
+    <title>Yu Gi Oh - Aventuras</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container sign-in-container">
+            <h1>BIENVENIDO A YU GI OH!</h1>
+            <p>¿ Ya Posees una cuenta?  Pues Adentrate a la Aventura!!! </p>
+            <a href="../index.html" class="btn register" id="loginCambio" value="inicio">
+                <i class="fa fa-sign-in-alt"></i> Iniciar Sesión
+            </a>
+        </div>
+
+        <div class="form-container sign-up-container">
+            <form id="formRegistro" th:action="@{/login}" method="get">
+                <h1>CREA UNA CUENTA</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-google"></i></a>
+                    <a href="#" class="social"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-square-x-twitter"></i></a>
+                </div>
+                <input type="text" class="form-control" id="usuario" minlength="3" maxlength="20" placeholder="Nombre de Usuario" pattern="[a-zA-Z0-9]{3,20}" required />
+                <input type="text" class="form-control" name="nombre" id="nombre" minlength="2" maxlength="10" placeholder="Nombre" pattern="[a-zA-Z]{2,10}" required />
+                <input type="text" class="form-control" name="apellido" id="apellido" minlength="2" maxlength="15" placeholder="Apellido" pattern="[a-zA-Z]{2,15}" required />
+                <input pattern="[0-9]{1,13}" type="text" class="form-control" name="numero" id="numero" minlength="11" maxlength="13" placeholder="Teléfono" required />
+                <input type="text" class="form-control" name="numero" id="cedula" pattern="[0-9]{4,8}" title="Por favor ingrese un número de cédula válido de entre 4 y 8 dígitos" placeholder="Nº Cédula" required>
+                <input class="form-control" type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                <input class="form-control" type="password" name="clave" id="clave" placeholder="Contraseña" minlength="8" maxlength="14" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&_\-])[A-Za-z\d@$!%*?&_\-]{8,}" required>
+               <br> <a href="#" class="password-requirements">La contraseña debe cumplir los siguientes requisitos:</a><br><br>
+                <h3 class="requisito">Al menos 8 caracteres</h3>    
+                <h3 class="requisito">Al menos una letra minúscula y una mayúscula</h3>
+                <h3 class="requisito">Al menos un número y un carácter especial</h3>
+                <button type="submit" class="btn" id="registrarse" value="true">
+                    Registrarse <img src="../app/img/register.png" alt="" srcset="" class="regis-btt">
+                </button>
+            </form>
+        </div>
+    </div>  
+
+    <dialog id="editConfirmado_JC" class="editConfirmado">
+        <h1>Registro exitoso</h1>
+        <img src="../app/img/verificado.gif" alt="Registro exitoso" width="200" height="180">
+    </dialog>
+
+    <dialog id="errorCampos_JC" class="errorConfirmado">
+        <h1>Rellene todos los campos</h1>
+        <img src="../app/img/giphy.gif" alt="Rellene todos los campos" width="200" height="180">
+    </dialog>
+
+    <dialog id="registerror_JC" class="errorRegister">
+        <h1>Este Usuario ya está Registrado</h1>
+        <img src="../app/img/atem-yugi.gif" alt="Usted ya está registrado(a)" width="200" height="180">
+    </dialog>
+
+</body>
+<script src="./js/loginOff.js" type="Module"></script>
+</html>

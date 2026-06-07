@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/vision.css">
+    <script src="https://kit.fontawesome.com/fe0dc59af9.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./img/ojo.png" type="image/x-icon">
+    <title>Visión del Proyecto- TJC</title>
+</head>
+<body>
+    <header id="header">
+        <nav class="menu">
+         <div class="logo">
+             <a href="#" class="img-principal"><img src="./img/kuriboh.png" alt="kuriboh">Proyecto Yu Gi OH</a>
+             <a href="#" class="btn-menu" id="btn-menu"><i class=" icono fa fa-bars" aria-hidden="true"></i></a> 
+         </div>
+     
+         <div class="enlaces" id="enlaces">
+             <a href="index.html" title="Cartas"> <img src="./img/card-games.png" alt=""> Buscador de Cartas</a>
+             <a href="vision.html" title="Descripción del proyecto"> <img src="./img/ojo.png" alt=""  aria-hidden="true" height="20px"> Objetivo del Proyecto</a>
+           
+             
+             <button
+          aria-label="Cerrar Sesion"
+          type="submit"
+          class="cerrarVision"
+          id="cerrarvision"
+          title="Cierre de Sesión del Usuario"
+        >
+         
+          <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i>
+        </button>
+         </div>
+        </nav> 
+        </header><br><br><br><br>
+        <section>
+        <article><h1>Proyecto Yu Gi OH Por Jean Coffi</h1>
+        <p>Este proyecto tiene la finalidad de realizar la búsqueda de cartas en una Api de Gu-Yi-Oh.  Las consultas realizas permiten obtener y visualizar los atributos de la carta, como imágenes, estadísticas, entre otras. El proyecto desarrollado permite buscar, almacenar y eliminar los datos de las cartas Yu-Gi-Oh, que están disponibles en la Api de Gu-Yi-Oh. <br> <br> Para poder realizar la búsqueda de cartas, los usuarios deben registrarse en el sistema, incluyendo el nombre de usuario, nombre, apellido, teléfono, correo electrónico y la contraseña.</p>
+        <img src="./img/imagenRegister.png" alt="imagenregister" class="img1-proyecto">
+        <p>Una vez registrado en el sistema, el usuario puede acceder al mismo iniciando la sesión, para ello se solicita el nombre de usuario y la contraseña. </p><br>
+        <img src="./img/imagenLogin.png" alt="imagen1" class="img1-proyecto"><br><br>
+        <p>Cuando el usuario haya iniciado una sesión, podrá hacer la búsqueda de la carta deseada a través de su nombre. </p><br>
+        <img src="./img/imagenProyecto.png" alt="imagen2" class="img1-proyecto"><br><br>
+        <p>Una vez encontrada la carta solicita aparecerá la información de esta, específicamente, el número que identifica la carta (Id), el nombre, tipo, ataque, defensa, nivel o rango y la descripción. La información mostrada varía de acuerdo al tipo de carta, es decir, si es tipo monstruo, carta tipo trampa, carta mágica o tipo token.</p><br><br>
+        <img src="./img/imagenProyecto1.png" alt="imagen3" class="img1-proyecto"><br><br>
+        <p>Cuando se muestra la carta buscada se tiene la opción de guardar o descartar. En el primer caso, se almacena la información de la carta en la base de datos IndexedDB, para que pueda ser consulta posteriormente; y en el segundo caso, no se almacena la información de la carta y se descarta de la pantalla. <br>  Cabe destacar, que a la hora de guardar las cartas se hace siguiendo la estructura de cola, es decir, primero que entra primero que sale (FIFO). <br> El proyecto también cuenta con la opción de filtros para poder visualizar las cartas guardadas, ya sea por tipo de carta o si se desea visualizar todas aquellas que han sido almacenadas. <br></p><br><br>
+        <img src="./img/imagenProyecto.png" alt="imagen2" class="img1-proyecto"><br><br>
+        <p>Una vez que se haga clic en alguno de los filtros se muestra la carta o las cartas que hayan sido almacenadas.  </p><br><br>
+        <img src="./img/imagenProyecto1.png" alt="imagen3" class="img1-proyecto"><br><br>
+        <p>Cuando se muestran las cartas almacenadas se puede visualizar más detalles de las mismas, como estadísticas y variantes, al darle clic al botón “Ver Detalles”.</p><br><br>
+        <img src="./img/imagenProyecto3.png" alt="imagen3" class="img1-proyecto"><br><br>
+        <p>Finalmente, también se tiene la opción de eliminar las cartas almacenadas, cual se hace siguiendo la estructura FIFO.</p><br><br>
+        <img src="./img/imagenProyecto4.png" alt="imagen3" class="img1-proyecto"><br><br>
+        <p>Limitaciones:</p>
+        <ul><li>		Se debe tener en cuenta que la Api contiene una gran cantidad de cartas con su respectiva información, por lo que el nombre debe ser exacto y en inglés, en caso contrario dará un mensaje de que no se encuentra la carta. No se logró hacer uso de una Api de traducción para contar con búsqueda en diferentes idiomas.  </li><br>
+            <li>	Debido a que existen una infinidad de fusiones, las cuales dependen de diversos factores como los tipos de cartas, los efectos de las cartas y los tipos de invocación, se decidió trabajar con “Variantes”, las cuales se obtuvieron haciendo un filtro por el nombre de la carta. Específicamente, el nombre de la carta se busca en la descripción del resto de cartas, dado que la descripción indica las cartas necesarias para la creación de la variante en el caso que aplique.</li><br>
+            <li>	El proyecto no cuenta con un botón para ordenar los datos el método sort y la burbuja.</li>
+        </ul> <br>
+        <p style="text-align: center;">Notas: <br> Al darle click al boton ver detalles se tardara un poco ya que se accede en la API para buscar las variaciones de la carta <br> Se deben eliminar todas las DB de indexedDB para evitar errores en esta DB <br> Para ver Nombre de las cartas de la API: https://ygoprodeck.com/api-guide/ </p>
+    </article>
+    </section>
+    <footer>  <span>
+        Profesor <strong>Ronald Palacios</strong> | Curso:
+        Programación Básica con JavaScript &copy;<span id="actual"></span><br>Proyecto:Técnicas
+        <img src="./img/hacker.png" alt="">|Alumno: <strong> Jean Coffi</strong>
+          </span>
+          <script>
+              let actual = (document.getElementById("actual").innerHTML =
+                  new Date().getFullYear());
+          </script></footer>
+        <dialog id="sesionCerradaVision" class="cerradasesion">
+            <h1>Cerrando Sesión</h1>
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+        </dialog>
+        
+</body>
+<script src="./js/js_Menu/headroom.min.js"></script>
+<script src="./js/js_Menu/jquery.min.js"></script> 
+<script src="./js/js_Menu/menu.js"></script>
+<script src="./js/main.js" type="Module"></script>
+</html>

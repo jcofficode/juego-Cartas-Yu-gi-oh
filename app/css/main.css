@@ -1,0 +1,1124 @@
+/*CSS de la Aplicacion Buscador de Cartas Yu gi oh*/
+/*CSS general de la pagina*/
+body{
+    background-image: url(../../app/img/fondo-yugioh.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+}
+
+/*CSS para el  Menú Dinámico */
+header{
+    backdrop-filter: blur(5px);
+    background: rgba(13, 12, 12);
+ 
+    position: fixed;
+    width: 98%;
+    right: 0.2%;
+    border-radius: 20px;
+    top: 10px;
+    border: 5px solid rgb(238, 177, 9);
+}
+
+.menu{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.img-principal{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+.menu .logo {
+    display: inline-block; 
+    margin-right: 1em;
+}
+
+.menu .logo img {
+    vertical-align: top;
+    height: 19px;
+}
+
+.menu .btn-menu{
+    display: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+.menu .enlaces {
+    display: inline-block;
+    text-align: right;
+}
+
+.menu .enlaces a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    text-align:center;
+    transition: transform 0.3s ease,background-color 0.3s ease;
+}
+
+.menu .enlaces i{
+    margin-right: 5px;
+}
+
+.menu .enlaces a:hover {
+    background: #ff7b00;
+    color:#fff;
+    border-radius: 5px;
+    transform: scale(1.0);
+}
+
+.menu{
+    z-index: 2;
+}
+
+/* Efectos del menu*/
+.headroom {
+    transition: transform .3s ease;
+    border-radius: 10px;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+    z-index: 1000;
+}
+
+.headroom--unpinned {
+    transform: translateY(-125%);
+    z-index: 1000;
+}
+
+/* Mediaqueries responsive para el Menu dinamico */
+@media screen and (max-width: 700px) {
+    header .menu {
+        flex-direction:column;
+    }
+    
+    header .menu .logo {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+
+    .menu .logo img {
+        vertical-align: top;
+        height: 22px;
+    }
+
+    header .menu .logo .btn-menu{
+        display: inline-block;
+    }
+
+    header .menu .enlaces {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+   
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        margin-bottom: 20%;
+    }
+
+    header .menu {
+        flex-direction:column;
+        
+    }
+    
+    header .menu .logo {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+
+    header .menu .logo .btn-menu{
+        display: inline-block;
+    }
+
+    header .menu .enlaces {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+   
+}
+
+/*CSS del buscador de cartas */
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+   
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 10px;
+    margin: 8% auto;
+    width: 80%;
+    max-width: 1000px;
+    border: 5px solid  rgb(238, 112, 9);
+}
+
+.contenedor_JC {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.error_JC {
+    padding: 1rem;
+    border-top: 20%;
+    border: 1px solid  rgb(250, 235, 235);
+    background-color: #f00f1b;
+    color: white;
+    border-radius: 30px;
+}
+
+.guardado_JC {
+    padding: 1rem;
+    border-top: 20%;
+    border: 1px solid  #2d8a46;
+    background-color: #3ab65c;
+    color: white;
+    border-radius: 30px;
+}
+
+/*Responsive de buscador de cartas*/
+@media (min-width: 641px) and (max-width: 1007px) {
+  main {
+    margin: 11% auto;
+  
+  }
+
+  main h1{
+    font-size: medium;
+  }
+  }
+
+  @media (min-width: 320px) and (max-width: 625px) {
+    
+    header {
+   right: 0%;
+     
+    }
+  
+    }
+
+    @media (min-width: 320px) and (max-width: 640px){
+        main {
+            margin: 14% auto;
+        }
+    }
+
+.titulo-buscador_JC{
+    margin: 0 auto;
+    font-family: "Playwrite DK Uloopet", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  border-bottom: 2px solid white;
+
+}
+
+.nada_JC{
+    font-family: "Playwrite DK Uloopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+.fav_JC{
+    margin-left: 20%;
+    font-family: "Playwrite DK Uloopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.buscar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.buscar input {
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+}
+
+
+.btn input[type="button"] {
+    width: 55px;
+    height: 55px;
+    background-image: url('../img/loupe.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 5px solid rgb(238, 112, 9);
+    position: absolute;
+    top: -15%;
+    right: 0;
+    
+}
+
+
+.btn input[type="button"]:hover{
+  
+ background-color: rgb(238, 112, 9);;
+ transition: transform 0.5s ease; 
+  transform: scale(1.1); 
+  cursor: pointer;
+  
+}
+
+/* Responsive para el buscador de cartas */
+@media (max-width: 768px) {
+    .buscar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .buscar input {
+        width: 100%;
+    }
+
+    .btn input[type="button"] {
+        position: absolute;
+        right: 0;
+       left: 96%;
+       bottom: 22%;
+        transform: none;
+        margin-top: 4.5px;
+        align-self: center;
+    }
+
+    
+
+    .titulo-buscador_JC {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 480px) {
+    .buscar input {
+        width: 100%;
+    }
+
+    .btn input[type="button"] {
+        position: relative;
+        right: 0;
+        
+        bottom: 55px;
+        transform: none;
+        margin-top: 10px;
+        align-self: center;
+    }
+
+   
+
+    .titulo-buscador_JC {
+        font-size: small;
+    }
+}
+
+/*CSS para la animacion de carga al buscar la carta Yu gi oh*/
+
+.contenidoAnimacion_JC{
+    display: none;
+}
+.sk-circle {
+    margin: 5% auto;
+    width: 70px;
+    height: 70px;
+    position: relative;
+  }
+  .sk-circle .sk-child {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .sk-circle .sk-child:before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 15%;
+    height: 15%;
+    background-color: rgb(238, 112, 9);
+    border-radius: 100%;
+    -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+            animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+  }
+  .sk-circle .sk-circle2 {
+    -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+            transform: rotate(30deg); }
+  .sk-circle .sk-circle3 {
+    -webkit-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+            transform: rotate(60deg); }
+  .sk-circle .sk-circle4 {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  .sk-circle .sk-circle5 {
+    -webkit-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+            transform: rotate(120deg); }
+  .sk-circle .sk-circle6 {
+    -webkit-transform: rotate(150deg);
+        -ms-transform: rotate(150deg);
+            transform: rotate(150deg); }
+  .sk-circle .sk-circle7 {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .sk-circle .sk-circle8 {
+    -webkit-transform: rotate(210deg);
+        -ms-transform: rotate(210deg);
+            transform: rotate(210deg); }
+  .sk-circle .sk-circle9 {
+    -webkit-transform: rotate(240deg);
+        -ms-transform: rotate(240deg);
+            transform: rotate(240deg); }
+  .sk-circle .sk-circle10 {
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg); }
+  .sk-circle .sk-circle11 {
+    -webkit-transform: rotate(300deg);
+        -ms-transform: rotate(300deg);
+            transform: rotate(300deg); }
+  .sk-circle .sk-circle12 {
+    -webkit-transform: rotate(330deg);
+        -ms-transform: rotate(330deg);
+            transform: rotate(330deg); }
+  .sk-circle .sk-circle2:before {
+    -webkit-animation-delay: -1.1s;
+            animation-delay: -1.1s; }
+  .sk-circle .sk-circle3:before {
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s; }
+  .sk-circle .sk-circle4:before {
+    -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s; }
+  .sk-circle .sk-circle5:before {
+    -webkit-animation-delay: -0.8s;
+            animation-delay: -0.8s; }
+  .sk-circle .sk-circle6:before {
+    -webkit-animation-delay: -0.7s;
+            animation-delay: -0.7s; }
+  .sk-circle .sk-circle7:before {
+    -webkit-animation-delay: -0.6s;
+            animation-delay: -0.6s; }
+  .sk-circle .sk-circle8:before {
+    -webkit-animation-delay: -0.5s;
+            animation-delay: -0.5s; }
+  .sk-circle .sk-circle9:before {
+    -webkit-animation-delay: -0.4s;
+            animation-delay: -0.4s; }
+  .sk-circle .sk-circle10:before {
+    -webkit-animation-delay: -0.3s;
+            animation-delay: -0.3s; }
+  .sk-circle .sk-circle11:before {
+    -webkit-animation-delay: -0.2s;
+            animation-delay: -0.2s; }
+  .sk-circle .sk-circle12:before {
+    -webkit-animation-delay: -0.1s;
+            animation-delay: -0.1s; }
+  
+  @-webkit-keyframes sk-circleBounceDelay {
+    0%, 80%, 100% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    } 40% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+  @keyframes sk-circleBounceDelay {
+    0%, 80%, 100% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    } 40% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+  /* CSS del contenedor de la carta */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 46%;
+    margin: 0 auto;
+}
+
+/* CSS del encabezado de la carta */
+.card-header {
+    text-align: center;
+}
+
+.card-id {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.card-name {
+    font-size: 1.5em;
+    
+    margin: 5px 0;
+}
+
+/* CSS de la imagen de la carta */
+.card-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0;
+}
+
+/* CSS de los detalles de la carta */
+.card-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.card-type, .card-atk, .card-def, .card-level, .card-desc {
+    font-size: 1em;
+    
+}
+
+.card-type, .card-desc {
+    grid-column: span 2;
+}
+
+.card-level {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.card-desc {
+    margin-top: 10px;
+    
+}
+
+.atk-link_JC{
+    display: flex;
+    flex-direction: row;
+    margin-left: 75%;
+}
+
+/*Responsives*/
+@media (max-width: 768px) {
+  .card{
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card{
+    max-width: 60%;
+  }
+}
+
+/* CSS de los botones de la carta */
+.guardar, .descartar {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.guardar {
+    background-color: green;
+    color: white;
+    
+}
+
+.descartar {
+    background-color: red;
+    color: white;
+}
+
+.guardar:hover, .descartar:hover {
+    opacity: 0.8;
+}
+
+
+.card-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 5px; 
+}
+
+.card-buttons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-buttons button:hover {
+    background-color: #ccc;
+}
+
+.card-buttons .guardar {
+    background-color: #4caf50; 
+    color: white;
+}
+
+.card-buttons .descartar {
+    background-color: #f44336; 
+    color: white;
+}
+
+/* CSS para la sección de filtro */
+.filtroBotones_JC {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
+    backdrop-filter: blur(5px);
+    border: 4px solid #d87c0b;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.filtroBotones_JC .titulo_JC {
+    font-size: 2em;
+    color: #fff;
+    font-family: "Playwrite DK Uloopet", cursive;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.filtroBotones_JC button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.filtroBotones_JC button:hover {
+    background-color: #FFD700;
+    transform: scale(1.1);
+}
+
+/* CSS para las cartas filtradas*/
+.filtro_JC {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+#eliminarCartaFiltro_JC {
+    background-color: red;
+    color: #fff;
+    display: block;
+    width: calc(100% - 40px);
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#eliminarCartaFiltro_JC:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.05);
+}
+
+/*Responsive del filtro*/
+@media (max-width: 768px) {
+    .filtroBotones_JC {
+        width: 90%;
+    }
+
+    .filtroBotones_JC .titulo_JC {
+        font-size: 1.5em;
+    }
+
+    .filtroBotones_JC button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .filtro_JC {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .filtroBotones_JC {
+        width: 100%;
+    }
+
+    .filtroBotones_JC .titulo_JC {
+        font-size: 1.2em;
+    }
+
+    .filtroBotones_JC button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+}
+
+.cartasMonstruos_JC {
+    background-color: #d87c0b;
+    color: #fff;
+    border: 6px solid rgb(255 115 0);
+}
+
+.trampa_JC {
+    background-color: rgba(255, 192, 203, 1);
+    color: #000000;
+    border: 6px solid rgb(218, 66, 132);
+}
+
+.magica_JC {
+    background-color: rgba(0, 218, 218, 0.5);
+    color: #fff;
+    border: 6px solid rgb(38, 244, 179);
+}
+
+.token_JC {
+    background-color: rgb(195, 189, 189);
+    border: 6px solid rgb(138, 137, 141);
+}
+
+.todas_JC {
+    background-color: rgba(128, 0, 128, 0.9);
+    color: #fff;
+    border: 6px solid rgb(191, 27, 246);
+}
+
+.cerrar {
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: rgba(13, 12, 12);
+    font-size: 20px;
+    backdrop-filter: blur(5.5px);
+}
+
+
+/* CSS para el contenedor principal de cartas */
+.carta-container-jc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; 
+    justify-content: center; 
+  }
+  
+  /* CSS para cada carta */
+  .card-wrapper-jc {
+    width: calc(50% - 16px); 
+    box-sizing: border-box; 
+    padding: 16px;
+  }
+  
+  .card-jc {
+    border: 2px solid;
+    padding: 16px;
+    position: relative; 
+  }
+  
+  .card-jc img {
+    max-width: 100%; 
+    height: auto; 
+  }
+  
+  .card-jc h3 {
+    margin: 8px 0; 
+  }
+  
+  .card-jc p {
+    margin: 8px 0; 
+  }
+  
+  /* CSS para el botón de eliminación */
+  .eliminar-btn-jc {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  /* Responsive de las cartas */
+  @media (max-width: 768px) {
+    .card-wrapper-jc {
+      width: 100%; 
+    }
+  }
+  
+  #vista_JC {
+    
+    padding: 5px 10px;
+    background-color: #3498db; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+#vista_JC:hover {
+    background-color: #2980b9;
+}
+
+/*MODALES*/
+.errorConfirmado{
+    background-image: linear-gradient(45deg, #ef3131, #ff7b00, #b10000);
+    border-color: #b35508;
+    border-radius: 75px;
+}
+
+
+
+
+/*CSS para la seccion Ver detalles de la carta generada mediante un dialog*/
+
+.dialog-jc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .dialog-jc .content {
+    background: linear-gradient(to bottom, #8c6c32, rgb(250, 200, 82), #494646);
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .carta-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .carta-jc {
+    flex: 1;
+    margin: 10px;
+    border: 5px solid #d87c0b;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   background-color: #131313;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #d87c0b;
+    
+    
+  }
+  
+  .atras{
+    backdrop-filter: blur(5.5px);
+  }
+
+  .carta-jc img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid orange;
+  }
+  
+  .carta-jc img.small {
+    width: 260px;
+    height: 360px;
+    border-radius: 0;
+    margin-bottom: 10px;
+    border: none;
+  }
+  
+  .close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    align-self: flex-end;
+  }
+  
+  .close-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Responsive para el dialog  */
+  @media (max-width: 768px) {
+    .carta-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .carta-jc {
+      width: 100%;
+    }
+  }
+ 
+
+
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+  }
+  
+  .sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: #333;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+            animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+  }
+  .sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; }
+  .sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
+  .sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  
+  @-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); 
+    }
+  }
+  
+  @keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1);
+    } 
+  }
+
+
+  .cerradasesion {
+    background: #e98c19; 
+    border: 2px solid #dd8d29;
+    border-radius: 20px; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    text-align: center;
+    width: 300px; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
+}
+
+.cerradasesion h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto; 
+}
+
+.sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: #333;
+    float: left;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+
+.sk-cube-grid .sk-cube1 { animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 { animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 { animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 { animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 { animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 { animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 { animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 { animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 { animation-delay: 0.2s; }
+
+@keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        transform: scale3D(1, 1, 1);
+    } 
+    35% {
+        transform: scale3D(0, 0, 1);
+    }
+}
+
+
+#cartaborrada_JC {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border: 5px solid black;
+    border-radius: 20px;
+  }
+  
+  #cartaborrada_JC h1 {
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    #cartaborrada_JC {
+      padding: 10px;
+    }
+  }
+  
+
+/*CSS para el footer*/  
+footer {
+     
+  text-align: center;
+  height: max-content;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  width: 100%;
+  backdrop-filter: blur(5.5px);
+  color: #FFF;
+  background: rgb(0 0 0 /90%) ;
+  border: 2px solid  rgb(238, 112, 9)
+}
+
+footer strong {
+  color: #ffcc00;
+}

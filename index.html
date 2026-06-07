@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login/css/InicioSesion.css">
+    <link rel="icon" href="./app/img/login.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/fe0dc59af9.js" crossorigin="anonymous"></script>
+    <title>Iniciar Sesion- Yu GI</title>
+</head>   
+<body class="body_JC">
+    <div class="container_JC">
+        <div class="login-form_JC">
+            <h2 class="title_JC">Adentrate a la Aventura</h2>
+            <form id="formIngreso" th:action="@{/login}" method="get">
+                
+                <div class="input-group_JC">
+                    <input type="text" class="input_JC" id="usuario"  placeholder="Nombre de Usuario"  required />
+                </div>  
+              
+
+                <div class="input-group_JC">
+                    <input class="input_JC" type="password" name="clave" id="clave" placeholder="Contraseña"  required>
+                </div>
+                
+                 
+                  <div class="checkbox-group_JC">
+                    <input type="checkbox" id="remember" class="checkbox_JC">
+                    <label for="remember" class="checkbox-label_JC">Recordar contraseña</label>
+                </div>
+                
+                    <button type="submit" class="btn_JC" id="iniciar">
+                         Acceder 
+                    </button>
+
+                    
+             
+            </form>
+            <p class="signup_JC">No posee cuenta? <a href="#"  id="cambio" value="Registrarse" class="signup-link_JC" > Registrarse </a></p>
+        </div>
+    </div> 
+    
+
+    <dialog id="errorCampos_JC" class="errorConfirmado">
+        <h1>Rellene todos los campos</h1>
+        <img src="./app/img/giphy.gif" alt=""  width="200" height="180">  
+    </dialog>
+
+    <dialog id="errorDatos_JC" class="errorConfirmado">
+        <h1>Los datos no coinciden</h1>
+        <img src="./app/img/giphy.gif" alt=""  width="200" height="180">
+    </dialog>
+
+    
+    <dialog id="errorDatosVacios_JC" class="errorConfirmado">
+        <h1> Los datos son incorrectos Por Favor Ingreselos Correctamente o Registrese</h1>
+        <img src="./app/img/giphy.gif" alt=""  width="200" height="180">
+    </dialog>
+
+
+
+
+
+</body>
+<script src="./login/js/loginOff.js" type="Module"></script>
+</html>
